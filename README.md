@@ -35,8 +35,5 @@ npm run dev
 ### Deployment
 https://capstone-project.k-m-iwanska.workers.dev
 
-### Points
-61/64
-
 
 
