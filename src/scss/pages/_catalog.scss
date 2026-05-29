@@ -1,0 +1,344 @@
+@use '../abstracts/variables' as *;
+
+.catalog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Montserrat, sans-serif;
+    gap: 2.5rem;
+    
+    
+    .filters{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1.5rem;
+        max-width: 81.25rem;
+
+        .options{
+            display: flex;
+            gap: 1.5rem;
+            border-top: 2px solid $pink-color;
+            border-bottom: 2px solid $pink-color;
+            padding: 1.375rem 0 2.25rem;
+
+            &.hidden{
+                display: none;
+            }
+
+            .field{
+                max-width: 18.75rem;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.5rem;
+
+                label{
+                    font-size: 1.063rem;
+                    font-weight: 700;
+                }
+
+                input[type="radio"] {
+                    transform: scale(1.5);
+                    margin-top: 0.5rem;
+                    accent-color: #000;
+}
+
+                select{
+                    appearance: none;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 0.875rem;
+                    font-weight: 400;
+                    color: $lighter-grey;
+                    border: 1px solid $selector-border;
+                    border-radius: 0;
+                    padding: 0.5rem 0.938rem;
+                    height: 2.5rem;
+                    background: white url('/image/Header/arrow.png') no-repeat calc(100% - 0.75rem) center;
+                    padding-right: 2rem;
+                }
+            } 
+        } 
+
+        .buttons{
+            display: flex;
+            gap: 1.25rem;
+
+            button{
+                font-size: 0.938rem;
+            }
+        }
+    }
+
+    .sorting-search{
+        display: flex;
+        gap: 3rem;
+        max-width: 81.25rem;
+        width: 100%;
+        margin-top: 1.5rem;
+        
+        .sorting{
+            flex: 3;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+             p{
+                font-size: 1rem;
+                color: $dark-grey;
+            }
+            
+            select{
+                appearance: none;
+                cursor: pointer;
+                max-width: 12.625rem;
+                width: 100%;
+                height: 2.5rem;
+                border: 1px solid $selector-border;
+                border-radius: 0;
+                padding: 0.625rem 0.875rem;
+                color: $dark-grey;
+                font-size: 1rem;
+                background: white url('/image/Header/arrow.png') no-repeat calc(100% - 0.75rem) center;
+                padding-right: 2rem;
+            }
+           
+
+        }
+
+        .search{
+            position: relative;
+            flex: 1;
+            height: 2.5rem;
+
+            input{
+                appearance: none;
+                cursor: pointer;
+                width: 100%;
+                height: 2.5rem;
+                border: 1px solid $selector-border;
+                border-radius: 0;
+                padding: 0.625rem 2rem 0.625rem 0.875rem;
+                color: $dark-grey;
+                font-size: 1rem;
+
+                &::placeholder{
+                    color: $dark-grey;
+                }
+            }
+
+            img {
+                position: absolute;
+                right: 0.75rem;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                height: 16px;
+            }
+        }
+    }  
+
+    .catalog-container{
+        display: flex;
+        max-width: 81.25rem;
+        width: 100%;
+        gap: 3rem;
+
+        .products-list{
+            display: grid;
+            flex: 3;
+            justify-content: space-between;
+            gap: 0.75rem;
+            grid-template-columns: repeat(3, minmax(0, 18.5rem));
+            row-gap: 3rem;
+        }
+
+        .top-sets{
+            display:flex;
+            flex: 1;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            .one-set{
+                display: flex;
+                gap: 1.25rem;
+
+                img {
+                    max-height: 5.5rem;
+                }
+
+                .set-info{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    p{
+                        font-size: 0.938rem;
+                    }
+                }
+            }
+        }  
+    }
+
+    .pagination-container{
+        display: flex;
+        max-width: 81.25rem;
+        width: 100%;
+        gap: 3rem;
+        margin-top: 1.25rem;
+
+        .pagination {
+            flex: 3;
+            display: flex;
+            justify-content: space-between;
+
+            .prev-button, .next-button{
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                font-weight: 700;
+                font-size: 0.688rem;
+                background-color: $text-white;
+                color: #000;
+                border: 2px solid $pink-color;
+                border-radius: 0.25rem;
+                display: flex;
+                align-items: center;
+                gap: 0.875rem;
+            }
+
+            .page-number-buttons{
+                display: flex;
+                gap: 1rem;
+
+                button{
+                    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                    width: 2.5rem;
+                    height: 2.625rem;
+                    border-radius: 0.25rem;
+                    background-color: $text-white;
+                    color: #000;
+                    font-size: 0.938rem;
+                    font-weight: 500;
+                    padding: 0;
+                }
+
+                .active{
+                    background-color: $pink-color;
+                    color: $text-white;
+                }
+            
+            }
+
+            .hidden {
+                visibility: hidden;
+            }
+        }
+
+        .blank-part{
+            flex: 1;
+        }
+    }
+
+    @media (max-width: $breakpoint-medium) {
+        .filters, .sorting-search, .pagination-container{
+            padding: 1rem;
+        }
+
+        .sorting-search{
+            gap: 1.5rem;
+
+            .sorting {
+            flex: 3;
+            
+            }
+
+            .search{
+            flex: 2;
+            }
+        }
+
+        .catalog-container{
+            gap: 1.5rem;
+
+            .products-list{
+                display: grid;
+                flex: 3;
+                gap: 0.75rem;
+                grid-template-columns: repeat(2, minmax(0, 18.5rem));
+                row-gap: 3rem;
+                padding: 0 1rem;
+            }
+
+            .top-sets{
+                display:flex;
+                flex: 2;
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+
+        .pagination-container{
+            gap: 1.5rem;
+            
+            .pagination {
+            flex: 3;
+            }
+
+            .blank-part{
+            flex: 2;
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-small) {
+        .filters{
+            .buttons{
+                flex-direction: column;
+            }
+        }
+
+         .sorting-search{
+            gap: 1rem;
+
+            .sorting{
+                flex: 1;
+                flex-direction: column;
+                gap: 1.5rem;
+                align-items: flex-start;
+            }
+
+            .search {
+            flex: 1;
+            }
+        }
+    
+        .catalog-container{
+            gap: 1rem;
+
+            .products-list{
+                display: grid;
+                flex: 1;
+                gap: 0.75rem;
+                grid-template-columns: repeat(1, 1fr);
+                row-gap: 3rem;
+                padding: 0 1rem;
+            }
+
+            .top-sets{
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+
+         .pagination-container{
+            gap: 1rem;
+
+            .pagination, .blank-part {
+                flex: 1;
+            }
+        }
+    }
+}

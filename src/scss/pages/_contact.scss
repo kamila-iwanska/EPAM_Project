@@ -1,0 +1,154 @@
+@use '../abstracts/variables' as *;
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    font-family: Montserrat, sans-serif;
+
+    .banner{
+        text-align: center;
+        color: $text-white;
+        background-image: url('../../image/Contact Us/banner image.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 15rem 0;
+        gap: 2.25rem;
+
+        h1{
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom:1.25rem;
+        }
+
+        p{
+            font-size: 1.063rem;
+            font-weight: 400;
+            color: $banner-small-text-white;
+            line-height: 1.75rem;
+        }
+    }
+
+    .business-info{
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+        max-width: 81.25rem;
+        width: 100%;
+        padding: 8rem 0;
+
+        .info{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap:  1.375rem;
+
+            // zweryfikować odległość w p czy nie zamienić na div i gap zamiast line-height
+            h4{
+                font-size: 1.25rem;
+                font-weight: 700;
+            }
+
+            p{
+                text-align: center;
+                line-height: 1.75rem;
+                font-weight: 400;
+                font-size: 1.063rem;
+            }
+        }
+    }
+
+    .photo-and-form{
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+
+
+        .form-header{
+            width: 100%;
+            max-width: 39.5rem;
+
+            h2{
+                margin: 0 0 2.5rem;
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+
+            p{
+                margin: 0 0 4.5rem; 
+                font-size: 1.063rem;
+                font-weight: 400;
+            }
+
+            form{
+                max-width: 39.5rem;
+                display: flex;
+                flex-direction: column;
+
+                label{
+                    font-size: 1.125rem;
+                    font-weight: 700;
+                    margin: 0 0 0.5rem;
+                }
+
+                span{
+                    color: $pink-color;
+                }
+
+                input, textarea{
+                    height: 2.75rem;
+                    width: 100%;
+                    margin: 0 0 2.2rem;
+                    font-size: 16px;
+                    box-sizing: border-box;
+
+                 
+                }
+
+                textarea{
+                    margin: 0 0 1.5rem;
+                    height: 7.5rem;
+                }
+
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-medium) {
+        .business-info{
+            flex-direction: column;
+            gap: 3rem;
+        }
+        
+        .photo-and-form{
+            img{
+                display: none;
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-small) {
+    .business-info{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    .photo-and-form{
+        img{
+            display: none;
+        }
+
+        .form-header{
+            width: 100%;
+            max-width: 30rem;
+
+            form{
+                max-width: 30rem;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+    }
+}
+}

@@ -1,0 +1,360 @@
+@use '../abstracts/variables' as *;
+
+.product{
+    display: flex;
+    justify-content: center;
+    font-family: Montserrat, sans-serif;
+
+    .inner-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 81.25rem;
+        width: 100%;
+        gap: 6rem;
+
+        .presentation{
+            display: flex;
+            gap: 2.625rem;
+
+            .photos{
+                display: flex;
+                flex-direction: column;
+                gap: 0.625rem;
+                flex: 1;
+
+                .focus-image{
+                    width: 100%;
+                    height: auto;
+                }
+
+                .small-images{
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 1rem;
+
+                    img{
+                        object-fit: cover;
+                        flex: 1;
+                        width: 0;
+                        height: auto;
+                    }
+                }
+            }
+
+            .description{
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                justify-content: space-between;
+                gap: 1rem;
+
+                .text-part{
+                    h1{
+                        font-size: 1.875rem;
+                        font-weight: 700;
+                    }
+
+                    h3{
+                        font-size: 1.25rem;
+                        font-weight: 700;
+                        margin-top: 1rem;
+                    }
+
+                    p{
+                        font-size: 1.063rem;
+                        margin-top: 2.5rem;
+                    }
+
+                    .rating{
+                        display: flex;
+                        gap: 1rem;
+                        align-items: center;
+                        margin-top: 1rem;
+
+                        p{
+                            font-size: 0.813rem;
+                            margin: 0;
+                        }
+
+                        .stars{
+                            display: flex;
+                            gap: 0.25rem;
+                        }
+                    
+                    }
+                }
+
+                .selectors{
+                    label{
+                        font-size: 1.063rem;
+                        font-weight: 700;
+                        color: $dark-grey;
+                        margin: 1.875rem 0 0.813rem;
+                        display: block;
+                    }
+
+                    :first-child{
+                        margin-top: 0;
+                    }
+
+                    select{
+                        appearance: none;
+                        cursor: pointer;
+                        font-size: 0.813rem;
+                        font-weight: 400;
+                        font-family: Montserrat, sans-serif;
+                        color: $lighter-grey;
+                        width: 100%;
+                        border: 1px solid $selector-border;
+                        border-radius: 0;
+                        padding: 0.5rem 0.938rem;
+                        height: 2.5rem;
+                        background: white url('/image/Header/arrow.png') no-repeat calc(100% - 0.75rem) center;
+                        padding-right: 2rem;
+                    }
+                }
+
+                .quantity-add-buttons{
+                    display: flex; 
+                    gap: 0.75rem;
+
+                    .quantity{
+                        display: flex;
+                        align-items: center;
+                        border: 2px solid $pink-color;
+                        color: $quantity-button-grey;
+                        font-size: 1.625rem;
+                        font-weight: 700;
+
+                        button{
+                            background-color: transparent;
+                            color: $quantity-button-grey;
+                            font-size: 1.625rem;
+                            font-weight: 700;
+                            padding: 0.25rem;
+                            margin: 0.5rem 1.25rem;
+                        }
+                    }
+
+                    button{
+                        width: 100%;
+                        font-size: 1.063rem;
+                        font-weight: 700;
+                    }
+                }
+
+                img{
+                    align-self: flex-start;
+                }
+            }
+        }
+
+        .details-review-container{
+            display: flex;
+            flex-direction: column;
+            gap: 1.875rem;
+
+            .buttons{
+                display: flex;
+                justify-content: center;
+                gap: 7.5rem;
+
+                button{
+                    color: $black-text;
+                    background-color: transparent;
+                    font-size: 1.063rem;
+                    font-weight: 700;
+                    padding: 0 0 0.563rem;
+                    border-bottom: 2px solid transparent;
+                }
+
+                .active{
+                    border-color: $pink-color;
+                }
+            }
+
+            .selected-info{
+                display: flex;
+                flex-direction: column;
+
+                .hidden {
+                    display: none !important;
+                }
+    
+                .details{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2.25rem;
+                    font-size: 1.063rem;
+                    font-weight: 400;
+                    line-height: 150%;
+                    color: $dark-grey;
+                }
+
+                .reviews{
+                    display: flex;
+                    gap: 8.75rem;
+
+                    .left-side{
+                        display: flex;
+                        flex-direction: column;
+                        flex: 1;
+                        gap: 5.75rem;
+
+                        h4{
+                            font-size: 1.063rem;
+                            font-weight: 700;
+                        }
+
+                        .review{
+                            display: flex;
+                            gap: 1.5rem;
+
+                            img{
+                                align-self: flex-start;
+                            }
+
+                            .name-text-stars{
+                                display: flex;
+                                flex-direction: column;
+                                gap: 1.5rem;
+
+                                p{
+                                    font-size: 1.063rem;
+                                    font-weight: 400;
+                                    line-height: 150%;
+                                }
+
+                                .name-and-rating{
+                                    display: flex;
+                                    justify-content: space-between;
+
+                                    h5{
+                                        font-size: 1.063rem;
+                                        font-weight: 700;
+                                    }
+
+                                    span{
+                                        font-size: 0.813rem;
+                                        font-weight: 400;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .right-side{
+                        display:flex;
+                        flex-direction: column;
+                        flex:1;
+                        gap: 1.25rem;
+
+                         h4{
+                            font-size: 1.063rem;
+                            font-weight: 700;
+                        }
+
+                        p{
+                           font-size: 0.813rem;
+                            font-weight: 400;
+
+                            span{
+                                color: $pink-color;
+                            }
+                        }
+
+                        .rate-product{
+                            display: flex;
+                            gap: 1rem;
+                        }
+
+                        form{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 1.5rem;
+
+                            input, textarea{
+                                font-size: 0.813rem;
+                            }
+
+                            .input-container{
+                                display: flex;
+                                gap: 1.25rem;
+                            }
+
+                            textarea{
+                                height: 10.5rem;
+                            }
+
+                            .checkbox-container{
+                                font-size: 0.813rem;
+                                gap: 1rem;
+                            }
+
+                            button{
+                                align-self: flex-start;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .recommendations{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3.75rem;
+
+            h2{
+                font-size: 1.875rem;
+                font-weight: 700;
+                padding-bottom: 0.625rem;
+                border-bottom: 2px solid $pink-color;
+            }
+
+            .recommended-products{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                justify-content: space-between;
+                gap: 2.375rem;
+            }
+        }
+
+         @media (max-width: $breakpoint-medium) {
+            .presentation{
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .selected-info{
+                padding: 1rem;
+            }
+
+            .reviews{
+                flex-direction: column;
+            }
+            
+            .recommendations{
+                padding: 1rem;
+
+                .recommended-products{
+                grid-template-columns: repeat(2, 2fr);
+                row-gap: 3rem;
+                }
+            }
+        }
+
+        @media (max-width: $breakpoint-small) {
+            .recommendations{
+                padding: 1rem;
+
+                .recommended-products{
+                grid-template-columns: repeat(1, 1fr);
+                row-gap: 3rem;
+                }
+            }
+        }
+    }
+}

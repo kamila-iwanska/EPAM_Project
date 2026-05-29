@@ -1,0 +1,265 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home</title>
+    <link rel="stylesheet" href="/main.css">
+
+    <script defer src="/js/home.js" type="module"></script>
+</head>
+<body>
+     <header>
+        <div class = 'navbar'>
+            <div class = 'socials-section'>
+                <a href = "https://www.facebook.com"><img src="/image/Header/facebook.svg" alt="facebook" class="svg-img-left"></a>
+                <a href ="https://x.com"><img src="/image/Header/twitter.svg" alt="twitter" class="svg-img-left"></a>
+                <a href ="https://www.instagram.com"><img src="/image/Header/instagram.svg" alt="instagram" class="svg-img-left"></a>
+            </div>
+            <a href = "/"><img src="/image/Header/logo.png" alt="logo"></a>
+            <div class = 'user-section'>
+                <button id="account-toggle"><img src="/image/Header/user.svg" alt="profile" class="svg-img-right"></button>
+                <a href = "/cart"><img src="/image/Header/shopping-cart.svg" alt="cart" class="svg-img-right"><span id="cart-counter"></span></a>
+            </div>
+        </div>
+        <div class = 'menu'>
+            <ul>
+                <li><a class = "active" href = "/">Home</a> </li>
+                <li><a href = "/catalog">Catalog</a><img class = 'menu-arrow' src = '/image/Header/arrow.png' alt="header"></li>
+                <li><a href = "/about">About Us</a></li>
+                <li><a href = "/contact">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class ='login hidden' id="account-modal">
+            <form class = 'inner-login' id="account-form">
+                <div class = 'data-input'>
+                    <label for="email">Email address <span>*</span></label>
+                    <input type="email" id="email" name="email" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$">
+                    <label for="password">Password <span>*</span></label>
+                    <div class = 'input-wrapper'>
+                         <input type="password" id="password" name="password" required>
+                         <button type="button" id="account-eye"> <img src = '/image/Header/eye.png' alt="eye"></button>
+                    </div>
+                </div>
+                <div class = 'checkbox-forget'>
+                    <label class = 'checkbox-container' for = 'checkbox'>
+                        <input type ="checkbox" name = 'checkbox' id="checkbox">
+                        Remember me
+                    </label>
+                    <a href = '#' >Forget Your Password?</a>
+                </div>
+                <button>LOG IN</button>
+            </form>
+        </div>
+    </header>
+    <article class = 'homepage'>
+        <div class = 'banner-background'>
+            <div class = 'banner-content'>
+                <div class = 'left-side'>
+                    <h1>Smart Styles for Every Destination</h1>
+                    <p>Phasellus risus turpis, pretium sit amet magna non, molestie ultricies enim. <br/> Nullam pulvinar felis at metus. </p>
+                    <a href = '/catalog' class = 'link-button'> View All Items</a>
+                </div>
+                <img src = '../image/Homepage/header image.png' alt="header">
+            </div>
+        </div>
+        <div class = 'page-content'>
+            <div class = 'discount-25'>
+                <div class = 'left-side'>
+                    <div class = 'lil-header'>
+                        <img src='../image/Homepage/CMO image.png' alt="cmo">
+                        <div class = 'lil-text'>
+                            <h4>Lillian Bennett</h4>
+                            <p>Chief Marketing Officer</p>
+                        </div>
+                    </div>
+                    <h2>Aliquam Faucibus Odionecom.</h2>
+                    <p>Duis vestibulum elit vel neque pharetra vulputate. Quisque scelerisque nisi urna. Duis rutrum non risus in imperdiet. Proin molestie accumsan nulla sit.</p>
+                    <p>Namaki duis vestibulum elit vel neque pharetra vulputate. Quisque scelerisque nisi urna.</p>
+                </div>
+                <div class = 'right-side'>
+                    <h2>25 % Discount</h2>
+                    <p>Curabitur vulputate arcu odio, ac facilisis diam accumsan ut. Ut imperdiet et leo in vulputate. </p>
+                    <button>Get Discount</button>
+                </div>
+            </div>
+            <div class = 'travel-suitcase'>
+                <div class = 'text-part'>
+                    <h2>Travel suitcase</h2>
+                    <p>Duis vestibulum elit vel neque pharetra</p>
+                </div>
+                <div class = 'suitcase-part'>
+                    <div class = 'travel-0'>
+                        <h5>Duis vestibulum elit vel neque.</h5>
+                        <p>Duis vestibulum vel neque pharetra vulputate. Quisque scelerisque nisi.</p>
+                    </div>
+                    <div class = 'travel-1'>
+                        <h5>Neque vestibulum elit nequvel.</h5>
+                        <p>Duis vestibulum vel neque pharetra vulputate. Quisque scelerisque nisi.</p>
+                    </div>
+                    <div class = 'travel-2'>
+                        <h5>Elituis stibulum elit velneque</h5>
+                        <p>Duis vestibulum vel neque pharetra vulputate. Quisque scelerisque nisi.</p>
+                    </div>
+                    <div class = 'travel-3'>
+                        <h5>Vel vestibulum elit tuvel euqen.</h5>
+                        <p>Duis vestibulum vel neque pharetra vulputate. Quisque scelerisque nisi.</p>
+                    </div>
+                </div>
+            </div>
+            <div class = 'selected-products'>
+                <div class = 'text-part'>
+                    <h2>Selected Products</h2>
+                    <p>Duis vestibulum elit vel neque pharetra</p>
+                </div>
+                <div class = 'products-part' id="home-selected-products">
+                    
+                </div>
+            </div>
+            <div class = 'discount-banner'>
+                <div class = 'discount-left'>
+                    <h1>50%</h1>
+                    <h4>Curabitur vulputate arcu odio, ac facilisis diam.</h4>
+                </div>
+                <div class = 'discount-right'>
+                    <h3>Offer Of The Month</h3>
+                    <p>Curabitur vulputate arcu odio, ac facilisis diam<br/>accumsan ut. Ut imperdiet et leo in vulputate.</p>
+                    <a href = '/contact' class = 'link-button'>Get Offer Today</a>
+                </div>
+            </div>
+            <div class = 'new-products'>
+                <div class = 'text-part'>
+                    <h2>New Products Arrival</h2>
+                    <p>Duis vestibulum elit vel neque pharetra</p>
+                </div>
+                <div class = 'products-part' id="home-new-products-arrival"> 
+                </div>
+            </div>
+            <div class = 'customers'>
+                <div class = 'text-part'>
+                    <h2>Our Grateful Customers</h2>
+                    <p>Duis vestibulum elit vel neque pharetra</p>
+                </div>
+                <div class = 'customers-part'>
+                    <div class = customer>
+                        <img src='../image/Homepage/grateful customer 1.png' alt="customer 1">
+                        <p>Curabitur vulputate arcu odio, ac facilisis diam accumsan ut. Ut mperdiet et leo in vulputate.</p>
+                        <h5>Ethan Wade, New York</h5>
+                    </div>
+                     <div class = customer>
+                        <img src='../image/Homepage/grateful customer 2.png' alt="customer 2">
+                        <p>Curabitur vulputate arcu odio, ac facilisis diam accumsan ut. Ut mperdiet et leo in vulputate.</p>
+                        <h5>Jane Reyes, California</h5>   
+                    </div>
+                     <div class = customer>
+                        <img src='../image/Homepage/grateful customer 3.png' alt="customer 3">
+                        <p>Curabitur vulputate arcu odio, ac facilisis diam accumsan ut. Ut mperdiet et leo in vulputate.</p>
+                        <h5>Erica Banks, Miami</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <template id="home-product-template">
+            <div class = 'product-card'>
+                <div class = 'img-wrapper'>
+                    <span class = 'sale-badge'>SALE</span>
+                    <img src = '/image/Homepage/suitcase blue.png' class="home-product-image" alt="suitcase">
+                </div>
+                <h4 class="home-product-name">Vel vestibulum elit tuvel euqen.</h4>
+                <h5 class="home-product-price">$250</h5>
+                <button class="home-product-add-to-cart">Add To Cart</button>
+            </div>
+        </template>
+    </article>
+    <footer>
+         <div class="wave-banner">
+            <div class = 'center-div'>
+                <p>Our Benefits</p>
+                <div class = 'benefits'>
+                    <div class = 'one-benefit'>
+                        <img src="/image/Footer/travel-icon.svg" alt="travel">
+                        <p>Velit nisl sodales eget donec quis. volutpat orci.</p>
+                    </div>
+                    <div class = 'one-benefit'>
+                        <img src="/image/Footer/car-icon.svg" alt="car">
+                        <p>Dolor eu varius. Morbi fermentum velit nisl.</p>
+                    </div>
+                    <div class = 'one-benefit'>
+                        <img src="/image/Footer/money-icon.svg" alt="money">
+                        <p>Malesuada fames ac ante ipsum primis in faucibus.</p>
+                    </div>
+                    <div class = 'one-benefit'>
+                        <img src="/image/Footer/school-icon.svg" alt="school">
+                        <p>Nisl sodales eget donec quis. volutpat orci.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = 'white-part'>
+            <div class= 'left-part'>
+                <div class = 'left-upper-part'>
+                    <div>
+                        <h5><a class = 'footer-link' href = "/about">About Us</a></h5>
+                        <ul>
+                            <li><a href="#">Organisation</a></li>
+                            <li><a href="#">Partners</a></li>
+                            <li><a href="#">Clients</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Interesting Links</h5>
+                          <ul>
+                            <li><a href="#">Photo Gallery</a></li>
+                            <li><a href="/">Our Team</a></li>
+                            <li><a href="#">Socials</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Achievements</h5>
+                          <ul>
+                            <li><a href="#">Winning Awards</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Our Amazing Clients</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h5>Shipping Information</h5>
+                    <p>Nulla eleifend pulvinar purus, molestie euismod odio imperdiet ac. Ut sit amet erat nec nibh rhoncus varius in non lorem. Donec interdum, lectus in convallis pulvinar, enim elit porta sapien, vel finibus erat felis sed neque. Etiam aliquet neque sagittis erat tincidunt aliquam.</p>
+                </div>
+            </div>
+            <div class = 'right-part'>
+                <div>
+                    <h5><a class = 'footer-link' href = "/contact">Contact Us</a></h5>
+                    <p class='higher-p'>Bendum dolor eu varius. Morbi fermentum velitsodales egetonec. volutpat orci. Sed ipsum felis, tristique egestas et, convallis ac velitn consequat nec luctus.</p>
+                </div>
+                <div class = 'grid-container'>
+                    <div>
+                        <img src="/image/Footer/phone-icon.svg" alt="phone">
+                        <p>Phone: (+63) 236 6322</p>
+                    </div>
+                    <div>
+                        <img src="/image/Footer/mail-icon.svg" alt="mail">
+                        <p>public@news.com</p>
+                    </div>
+                    <div>
+                        <img src="/image/Footer/clock-icon.svg" alt="time">
+                        <div>
+                            <p>Mon - Fri: 10am - 6pm</p>
+                            <p>Sat - Sun: 10am - 6pm</p>
+                        </div>
+                    </div>
+                     <div>
+                        <img src="/image/Footer/pin-icon.svg" alt="location"> 
+                        <div>
+                            <p>639 Jade Valley, </p>
+                            <p>Washington Dc</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class = 'copyright'>© Copyright 2025</p>
+    </footer>
+</body>
+
+

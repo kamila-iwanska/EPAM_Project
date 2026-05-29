@@ -1,0 +1,29 @@
+@use '../abstracts/variables' as *;
+
+button{
+  background-color: $pink-color;
+  border: none;
+  border-radius: 0;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.813rem 1.75rem;
+  cursor: pointer;
+  color: $text-white;
+}
+
+.button-flex-start{
+    align-self: flex-start;
+}
+
+.link-button{
+  align-self: flex-start;
+  text-decoration: none;
+  background-color: $pink-color;
+  border: none;
+  border-radius: 0;
+  font-size: 1.125rem;
+  font-weight: bold;
+  padding: 1.25rem;
+  cursor: pointer;
+  color: $text-white;
+}

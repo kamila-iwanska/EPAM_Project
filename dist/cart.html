@@ -1,0 +1,205 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Cart</title>
+    <link rel="stylesheet" href="/main.css">
+    <script defer src="/js/cart.js" type="module"></script>
+</head>
+<body>
+     <header>
+        <div class = 'navbar'>
+            <div class = 'socials-section'>
+                <a href = "https://www.facebook.com"><img src="/image/Header/facebook.svg" alt="facebook" class="svg-img-left"></a>
+                <a href ="https://x.com"><img src="/image/Header/twitter.svg" alt="twitter" class="svg-img-left"></a>
+                <a href ="https://www.instagram.com"><img src="/image/Header/instagram.svg" alt="instagram" class="svg-img-left"></a>
+            </div>
+            <a href = "/"><img src="/image/Header/logo.png" alt="logo"></a>
+            <div class = 'user-section'>
+                <button id="account-toggle"><img src="/image/Header/user.svg" alt="profile" class="svg-img-right"></button>
+                <a href = "/cart"><img src="/image/Header/shopping-cart.svg" alt="cart" class="svg-img-right"><span id="cart-counter"></span></a>
+            </div>
+        </div>
+        <div class = 'menu'>
+            <ul>
+                <li><a href = "/">Home</a> </li>
+                <li><a href = "/catalog">Catalog</a><img class = 'menu-arrow' src = '/image/Header/arrow.png' alt="header"></li>
+                <li><a href = "/about">About Us</a></li>
+                <li><a href = "/contact">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class ='login hidden' id="account-modal">
+            <form class = 'inner-login' id="account-form">
+                <div class = 'data-input'>
+                    <label for="email">Email address <span>*</span></label>
+                    <input type="email" id="email" name="email" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$">
+                    <label for="password">Password <span>*</span></label>
+                    <div class = 'input-wrapper'>
+                         <input type="password" id="password" name="password" required>
+                         <button type="button" id="account-eye"> <img src = '/image/Header/eye.png' alt="eye"></button>
+                    </div>
+                </div>
+                <div class = 'checkbox-forget'>
+                    <label class = 'checkbox-container' for = 'checkbox'>
+                        <input type ="checkbox" name = 'checkbox' id="checkbox">
+                        Remember me
+                    </label>
+                    <a href = '#' >Forget Your Password?</a>
+                </div>
+                <button>LOG IN</button>
+            </form>
+        </div>
+    </header>
+    <article class="cart">
+        <div class="banner">
+            <h1>My Cart</h1>
+        </div>
+        <table class="cart-table">
+            <thead>
+                <tr class = 'table-header'>
+                    <th>IMAGE</th>
+                    <th>PRODUCT NAME</th>
+                    <th>PRICE</th>
+                    <th>QUANTITY</th>
+                    <th>TOTAL</th>
+                    <th>DELETE</th>
+                </tr>
+            </thead>
+            <tbody id="cart-body"></tbody>
+            <template id="cart-template">
+                <tr>
+                    <td><img class="cart-template-image" alt = "product"/></td>
+                    <td class="cart-template-name">name</td>
+                    <td class="cart-template-price">$0</td>
+                    <td class = 'plus-minus'>
+                        <div class = 'positioning'>
+                            <button class="cart-template-minus"><img src='../../image/My Cart/minus.png' alt="minus"></button>
+                            <span class="cart-template-quantity">1</span>
+                            <button class="cart-template-plus"><img src='../../image/My Cart/plus.png' alt="plus"></button>
+                        </div>
+                    </td>
+                    <td class="cart-template-total">$0</td>
+                    <td><button class="cart-template-trash"><img src='../../image/My Cart/trash.png' alt="trash"></button></td>
+                </tr>
+            </template>
+        </table>
+        <div class ='under-table'>
+            <div class  = 'buttons'>
+                <button> CONTINUE SHOPPING</button>
+                <button id="cart-clear-cart"> CLEAR SHOPPING CART</button>
+            </div>
+            <div class = 'summary'>
+                <table class = 'summary-table'>
+                    <tr>
+                        <th>Sub Total</th>
+                        <td id="cart-subtotal">$0</td>
+                    </tr>
+                    <tr>
+                        <th>Discount</th>
+                        <td id="cart-discount">$0</td>
+                    </tr>
+                    <tr>
+                        <th>Shipping</th>
+                        <td id="cart-shipping">$0</td>
+                    </tr>
+                    <tr>
+                        <th>Total</th>
+                        <td id="cart-total">$0</td>
+                    </tr>  
+                </table>
+                <button id="cart-checkout">CHECKOUT</button>
+            </div>
+        </div>
+    </article>
+    
+    <footer>
+         <div class="wave-banner">
+            <div class = 'center-div'>
+                <p>Our Benefits</p>
+                <div class = 'benefits'>
+                    <div class = 'one-benefit'>
+                        <img src="/image/Footer/travel-icon.svg" alt="travel">
+                        <p>Velit nisl sodales eget donec quis. volutpat orci.</p>
+                    </div>
+                    <div class = 'one-benefit'>
+                        <img src="/image/Footer/car-icon.svg" alt="car">
+                        <p>Dolor eu varius. Morbi fermentum velit nisl.</p>
+                    </div>
+                    <div class = 'one-benefit'>
+                        <img src="/image/Footer/money-icon.svg" alt="money">
+                        <p>Malesuada fames ac ante ipsum primis in faucibus.</p>
+                    </div>
+                    <div class = 'one-benefit'>
+                        <img src="/image/Footer/school-icon.svg" alt="school">
+                        <p>Nisl sodales eget donec quis. volutpat orci.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = 'white-part'>
+            <div class= 'left-part'>
+                <div class = 'left-upper-part'>
+                    <div>
+                        <h5><a class = 'footer-link' href = "/about">About Us</a></h5>
+                        <ul>
+                            <li><a href="#">Organisation</a></li>
+                            <li><a href="#">Partners</a></li>
+                            <li><a href="#">Clients</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Interesting Links</h5>
+                          <ul>
+                            <li><a href="#">Photo Gallery</a></li>
+                            <li><a href="/">Our Team</a></li>
+                            <li><a href="#">Socials</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Achievements</h5>
+                          <ul>
+                            <li><a href="#">Winning Awards</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Our Amazing Clients</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h5>Shipping Information</h5>
+                    <p>Nulla eleifend pulvinar purus, molestie euismod odio imperdiet ac. Ut sit amet erat nec nibh rhoncus varius in non lorem. Donec interdum, lectus in convallis pulvinar, enim elit porta sapien, vel finibus erat felis sed neque. Etiam aliquet neque sagittis erat tincidunt aliquam.</p>
+                </div>
+            </div>
+            <div class = 'right-part'>
+                <div>
+                    <h5><a class = 'footer-link' href = "/contact">Contact Us</a></h5>
+                    <p class='higher-p'>Bendum dolor eu varius. Morbi fermentum velitsodales egetonec. volutpat orci. Sed ipsum felis, tristique egestas et, convallis ac velitn consequat nec luctus.</p>
+                </div>
+                <div class = 'grid-container'>
+                    <div>
+                        <img src="/image/Footer/phone-icon.svg" alt="phone">
+                        <p>Phone: (+63) 236 6322</p>
+                    </div>
+                    <div>
+                        <img src="/image/Footer/mail-icon.svg" alt="mail">
+                        <p>public@news.com</p>
+                    </div>
+                    <div>
+                        <img src="/image/Footer/clock-icon.svg" alt="time">
+                        <div>
+                            <p>Mon - Fri: 10am - 6pm</p>
+                            <p>Sat - Sun: 10am - 6pm</p>
+                        </div>
+                    </div>
+                     <div>
+                        <img src="/image/Footer/pin-icon.svg" alt="location"> 
+                        <div>
+                            <p>639 Jade Valley, </p>
+                            <p>Washington Dc</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class = 'copyright'>© Copyright 2025</p>
+    </footer>
+</body>

@@ -1,0 +1,246 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Catalog</title>
+    <link rel="stylesheet" href="/main.css">
+    <script defer src="/js/catalog.js" type="module"></script>
+</head>
+<body>
+     <header>
+        <div class = 'navbar'>
+            <div class = 'socials-section'>
+                <a href = "https://www.facebook.com"><img src="/image/Header/facebook.svg" alt="facebook" class="svg-img-left"></a>
+                <a href ="https://x.com"><img src="/image/Header/twitter.svg" alt="twitter" class="svg-img-left"></a>
+                <a href ="https://www.instagram.com"><img src="/image/Header/instagram.svg" alt="instagram" class="svg-img-left"></a>
+            </div>
+            <a href = "/"><img src="/image/Header/logo.png" alt="logo"></a>
+            <div class = 'user-section'>
+                <button id="account-toggle"><img src="/image/Header/user.svg" alt="profile" class="svg-img-right"></button>
+                <a href = "/cart"><img src="/image/Header/shopping-cart.svg" alt="cart" class="svg-img-right"><span id="cart-counter"></span></a>
+            </div>
+        </div>
+        <div class = 'menu'>
+            <ul>
+                <li><a href = "/">Home</a> </li>
+                <li><a class = "active" href = "/catalog">Catalog</a><img class = 'menu-arrow' src = '/image/Header/arrow.png' alt="header"></li>
+                <li><a  href = "/about">About Us</a></li>
+                <li><a href = "/contact">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class ='login hidden' id="account-modal">
+            <form class = 'inner-login' id="account-form">
+                <div class = 'data-input'>
+                    <label for="email">Email address <span>*</span></label>
+                    <input type="email" id="email" name="email" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$">
+                    <label for="password">Password <span>*</span></label>
+                    <div class = 'input-wrapper'>
+                         <input type="password" id="password" name="password" required>
+                         <button type="button" id="account-eye"> <img src = '/image/Header/eye.png' alt="eye"></button>
+                    </div>
+                </div>
+                <div class = 'checkbox-forget'>
+                    <label class = 'checkbox-container' for = 'checkbox'>
+                        <input type ="checkbox" name = 'checkbox' id="checkbox">
+                        Remember me
+                    </label>
+                    <a href = '#' >Forget Your Password?</a>
+                </div>
+                <button>LOG IN</button>
+            </form>
+        </div>
+    </header>
+    <article class = 'catalog'>
+        <div class = 'filters'>
+            <div class = 'options' id="catalog-filters">
+                <div class="field">
+                    <label for="size">Size</label>
+                    <select id="size">
+                        <option selected disabled value="">Choose option</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="S-L">S-L</option>
+                        <option value="S, M, XL">S, M, XL</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="color">Color</label>
+                    <select id="color">
+                        <option selected disabled value="">Choose option</option>
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                        <option value="black">Black</option>
+                        <option value="grey">Grey</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="pink">Pink</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="category">Category</label>
+                    <select id="category">
+                        <option selected disabled value="">Choose option</option>
+                        <option value="carry-ons">Carry-Ons</option>
+                        <option value="suitcases">Suitcases</option>
+                        <option value="luggage sets">Luggage Sets</option>
+                        <option value="kids' luggage">Kids' Luggage</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="sales">Sales</label>
+                    <input type="radio" name="sales" id="sales" />
+                </div>
+            </div>
+            <div class = 'buttons'>
+                <button id="catalog-clear-filters">CLEAR FILTERS</button>
+                <button id="catalog-hide-filters">HIDE FILTERS</button>
+            </div>
+        </div>
+        <div class = 'sorting-search'>
+            <div class = 'sorting'>
+                <p id="catalog-showing">Showing 1-12 Of 15 Results</p>
+                <select id="order">
+                    <option value="price-asc">Price ↑</option>
+                    <option value="price-dsc">Price ↓</option>
+                    <option value="popularity-dsc">Popularity ↓</option>
+                    <option value="rating-dsc">Rating ↓</option>
+                </select>
+            </div>
+            <div class = 'search'>
+                <input type = 'text' placeholder="Search Models" id="search">
+                <img src="/image/Catalog Page/loop.png" alt="loop">
+            </div>
+        </div>
+        <div class = 'catalog-container'>
+            <div class = 'products-list' id="catalog-products"></div>
+            <template id="catalog-products-template">
+                <div class = 'product-card'>
+                    <div class = 'img-wrapper'>
+                        <span class = 'sale-badge'>SALE</span>
+                        <img src = '/image/Homepage/suitcase blue.png' class="catalog-product-image" alt = 'suitcase'>
+                    </div>
+                    <h4 class="catalog-product-name">Vel vestibulum elit tuvel euqen.</h4>
+                    <h5 class="catalog-product-price">$250</h5>
+                    <button class="catalog-product-add-to-cart">Add To Cart</button>
+                </div>
+            </template>
+            <div class = 'top-sets' id="catalog-top-sets"></div>
+            <template id="catalog-top-sets-template">
+                <div class = 'one-set'>
+                    <img src ='/image/Catalog Page/set of suitcases red - small.png' class="catalog-top-set-image" alt="set">
+                    <div class = 'set-info'>
+                        <p class="catalog-top-set-name">Primis in faucibus aenean laoreet rhoncus ipsum eget.</p>
+                        <div class="catalog-top-set-rating">
+                            <img src ='/image/Catalog Page/star-full-small.png' alt="star">
+                            <img src ='/image/Catalog Page/star-full-small.png' alt="star">
+                            <img src ='/image/Catalog Page/star-full-small.png' alt="star">
+                            <img src ='/image/Catalog Page/star-full-small.png' alt="star">
+                            <img src ='/image/Catalog Page/star-full-small.png' alt="star">
+                        </div>
+                        <p class="catalog-top-set-price">$1000</p>
+                    </div>
+                </div>
+            </template>
+        </div>
+        <div class = 'pagination-container'>
+            <div class="pagination">
+                <button class = "prev-button" id="catalog-prev-page" class="hidden"><img src = '/image/Catalog Page/arrow-left.png' alt="left">PREV</button>
+                <div class = "page-number-buttons" id="catalog-page-buttons"></div>
+                <button class = "next-button" id="catalog-next-page" class="hidden">NEXT<img src = '/image/Catalog Page/arrow-right.png' alt="right"></button>
+            </div>
+            <div class = 'blank-part'></div>
+        </div>
+    </article>
+    <footer>
+         <div class="wave-banner">
+            <div class = 'center-div'>
+                <p>Our Benefits</p>
+                <div class = 'benefits'>
+                    <div class = 'one-benefit'>
+                        <img src="/image/Footer/travel-icon.svg" alt="travel">
+                        <p>Velit nisl sodales eget donec quis. volutpat orci.</p>
+                    </div>
+                    <div class = 'one-benefit'>
+                        <img src="/image/Footer/car-icon.svg" alt="car">
+                        <p>Dolor eu varius. Morbi fermentum velit nisl.</p>
+                    </div>
+                    <div class = 'one-benefit'>
+                        <img src="/image/Footer/money-icon.svg" alt="money">
+                        <p>Malesuada fames ac ante ipsum primis in faucibus.</p>
+                    </div>
+                    <div class = 'one-benefit'>
+                        <img src="/image/Footer/school-icon.svg" alt="school">
+                        <p>Nisl sodales eget donec quis. volutpat orci.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = 'white-part'>
+            <div class= 'left-part'>
+                <div class = 'left-upper-part'>
+                    <div>
+                        <h5><a class = 'footer-link' href = "/about">About Us</a></h5>
+                        <ul>
+                            <li><a href="#">Organisation</a></li>
+                            <li><a href="#">Partners</a></li>
+                            <li><a href="#">Clients</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Interesting Links</h5>
+                          <ul>
+                            <li><a href="#">Photo Gallery</a></li>
+                            <li><a href="/">Our Team</a></li>
+                            <li><a href="#">Socials</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Achievements</h5>
+                          <ul>
+                            <li><a href="#">Winning Awards</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Our Amazing Clients</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h5>Shipping Information</h5>
+                    <p>Nulla eleifend pulvinar purus, molestie euismod odio imperdiet ac. Ut sit amet erat nec nibh rhoncus varius in non lorem. Donec interdum, lectus in convallis pulvinar, enim elit porta sapien, vel finibus erat felis sed neque. Etiam aliquet neque sagittis erat tincidunt aliquam.</p>
+                </div>
+            </div>
+            <div class = 'right-part'>
+                <div>
+                    <h5><a class = 'footer-link' href = "/contact">Contact Us</a></h5>
+                    <p class='higher-p'>Bendum dolor eu varius. Morbi fermentum velitsodales egetonec. volutpat orci. Sed ipsum felis, tristique egestas et, convallis ac velitn consequat nec luctus.</p>
+                </div>
+                <div class = 'grid-container'>
+                    <div>
+                        <img src="/image/Footer/phone-icon.svg" alt="phone">
+                        <p>Phone: (+63) 236 6322</p>
+                    </div>
+                    <div>
+                        <img src="/image/Footer/mail-icon.svg" alt="mail">
+                        <p>public@news.com</p>
+                    </div>
+                    <div>
+                        <img src="/image/Footer/clock-icon.svg" alt="time">
+                        <div>
+                            <p>Mon - Fri: 10am - 6pm</p>
+                            <p>Sat - Sun: 10am - 6pm</p>
+                        </div>
+                    </div>
+                     <div>
+                        <img src="/image/Footer/pin-icon.svg" alt="location"> 
+                        <div>
+                            <p>639 Jade Valley, </p>
+                            <p>Washington Dc</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class = 'copyright'>© Copyright 2025</p>
+    </footer>
+</body>

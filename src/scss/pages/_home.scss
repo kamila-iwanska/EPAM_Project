@@ -1,0 +1,355 @@
+@use '../abstracts/variables' as *;
+
+.homepage{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Montserrat, sans-serif;
+
+    .banner-background{
+        background-color: $grey-banner;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 9.625rem 0;
+
+        .banner-content{
+            width: 100%;
+            max-width: 81.25rem;
+            display: flex;
+            align-items: center;
+            gap:2rem;
+
+            .left-side{
+                display: flex;
+                flex-direction: column;
+                gap: 1.875rem;
+
+            h1{
+                font-size: 3.125rem;
+                font-weight: 900;
+            }
+
+            p{
+                font-size: 1.063rem;
+                font-weight: 400;
+            }
+
+            button{
+                align-self: flex-start;
+                font-size: 1.125rem;
+            }
+            }
+            
+        }
+    }
+
+    .page-content{
+        max-width:81.25rem; 
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -4.875rem;
+        gap: 7.5rem;
+
+        .discount-25{
+            background-color: white;
+            display: flex;
+            gap: 1.25rem;
+            box-shadow: 0 20px 80px 0 $shadow-color;
+
+            h2{
+                font-size: 2.5rem;
+                font-weight: 900;   
+            }
+
+            p{
+            font-size: 1.063rem;
+            font-weight: 400;
+            }
+
+            .left-side{
+                display: flex;
+                flex-direction: column;
+                gap: 1.875rem;
+                flex: 1;
+                padding: 4.75rem 4.25rem;
+
+                .lil-header{
+                    display: flex;
+                    gap: 1.5rem;
+
+                    img{
+                        width: 5.375rem;
+                    }
+
+                    .lil-text{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.5rem;
+                        justify-content: center;
+
+                        h4{
+                            font-size: 1.25rem;
+                            font-weight: 700;
+                        }
+
+                        p{
+                            font-size: 1.063rem;
+                            font-weight: 400;
+                        }
+                    }
+                }
+                
+
+            }
+
+            .right-side{
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                gap: 1.875rem;
+                background-image: url('../../image/Homepage/suitcases main banner.png');
+                background-repeat: no-repeat;
+                justify-content: center;
+                color: $text-white;
+                padding: 4.75rem 4.25rem;
+
+                button{
+                    font-size: 1.125rem;
+                    align-self: flex-start;
+                }
+            }
+        }
+
+        .travel-suitcase, .selected-products, .new-products, .customers{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3.75rem;
+
+            .text-part{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.625rem;
+
+                h2{
+                    font-size: 2.5rem;
+                    font-weight: 900;
+                }
+
+                p{
+                    font-size: 1.063rem;
+                    font-weight: 400;
+                }
+            }
+            }
+
+        }
+
+        .travel-suitcase{
+            .suitcase-part{
+                display: flex;
+                gap: 2.5rem;
+
+                .travel-0, .travel-1, .travel-2, .travel-3{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.25rem;
+                    padding: 23.625rem 4.625rem 2.5rem 2.5rem;
+                    color: $text-white;
+                    max-width:18.5rem; 
+                    width: 100%;
+                    background-position: center center;
+                    background-size: 100%;
+                    transition-duration: 0.3s;
+
+                    h5{
+                        font-size: 1.188rem;
+                        font-weight: 700;
+                    }
+
+                    p{
+                        font-size: 1.188rem;
+                        font-weight: 400;
+                    }
+
+                    &:hover {
+                        background-size: 110%;
+                        box-shadow: 0 0 1rem black;
+                    }
+                }
+
+                .travel-0{
+                    background-image: url('../../image/Homepage/suitcase real-live.png');
+                }
+
+                .travel-1{
+                    background-image: url('../../image/Homepage/suitcase real-live-1.png');
+                }
+
+                .travel-2{
+                    background-image: url('../../image/Homepage/suitcase real-live-2.png');
+                }
+
+                .travel-3{
+                    background-image: url('../../image/Homepage/suitcase real-live-3.png');
+                }
+            }
+        }
+
+        .selected-products, .new-products{
+            .products-part{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                justify-content: space-between;
+                gap: 2.375rem;
+            }
+      
+        }
+
+        .discount-banner{
+            display: flex;
+            align-self: center;
+            align-items: center;
+            justify-content: space-around;
+            color: $text-white;
+            background-image: url('../../image/About Us/discount-50.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            max-width: 81.25rem;
+            width: 100%;
+            padding: 5rem 0;
+            
+
+            h1{
+                font-size: 14rem;
+                font-weight: 700;
+                line-height: 75%;
+            }
+
+            h3{
+                font-size: 2.5rem;
+                font-weight: 700;
+            }
+
+            h4{
+                font-size: 1.25rem;
+                font-weight: 400;
+            }
+
+            p{
+                font-size: 1.063rem;
+                font-weight: 400;
+            }
+
+            .discount-left{
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .discount-right{
+                display: flex;
+                flex-direction: column;
+                gap: 1.875rem;
+
+                .link-button{
+                    padding: 1.25rem 1.75rem;
+                }
+            }
+        }
+
+        .customers{
+            .customers-part{
+                display: flex;
+                gap: 1.25rem;
+
+                .customer{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 1.5rem;
+                    flex:1;
+                    box-shadow: 0 20px 80px 0 $shadow-color;
+                    padding: 2.75rem 2.5rem;
+                    text-align: center;
+
+                    p{
+                        font-size: 1.063rem;
+                    }
+
+                    h5{
+                        font-size: 1.063rem;
+                        font-weight: 700;
+                        color: $pink-color;
+                    }
+                }
+            }
+    
+        }
+    
+    @media (max-width: $breakpoint-medium){
+        .banner-content{
+            flex-direction: column;
+            padding: 2rem;
+        }
+
+        .page-content{
+            .discount-25{
+                flex-direction: column;
+                align-items: center;
+
+                .right-side{
+                    background-size: cover;
+                }
+            }
+
+            .suitcase-part{
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 1rem;
+            }
+
+            .discount-banner{
+            flex-direction: column;
+            gap: 5rem;
+
+            h1{
+                font-size: 9rem;
+            }
+            }
+
+            .selected-products, .new-products{
+                .products-part{
+                    grid-template-columns: repeat(2, 1fr);
+                    row-gap: 3rem;
+                }
+            }
+
+            .customers-part{
+                flex-direction: column;
+
+                .customer{
+                    max-width: 26.25rem;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-small) {
+        .page-content{
+            .selected-products, .new-products{
+                .products-part{
+                    grid-template-columns: repeat(1, 1fr);
+                    row-gap: 3rem;
+                }
+            }
+        }
+    }
+}
+

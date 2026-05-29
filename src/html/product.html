@@ -1,0 +1,286 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/main.css">
+
+    <script defer src="/js/product.js" type="module"></script>
+</head>
+<body>
+     <header>
+        <div class = 'navbar'>
+            <div class = 'socials-section'>
+                <a href = "https://www.facebook.com"><img src="/image/Header/facebook.svg" alt="facebook" class="svg-img-left"></a>
+                <a href ="https://x.com"><img src="/image/Header/twitter.svg" alt="twitter" class="svg-img-left"></a>
+                <a href ="https://www.instagram.com"><img src="/image/Header/instagram.svg" alt="instagram" class="svg-img-left"></a>
+            </div>
+            <a href = "/"><img src="/image/Header/logo.png" alt="logo"></a>
+            <div class = 'user-section'>
+                <button id="account-toggle"><img src="/image/Header/user.svg" alt="profile" class="svg-img-right"></button>
+                <a href = "/cart"><img src="/image/Header/shopping-cart.svg" alt="cart" class="svg-img-right"><span id="cart-counter"></span></a>
+            </div>
+        </div>
+        <div class = 'menu'>
+            <ul>
+                <li><a href = "/">Home</a> </li>
+                <li><a href = "/catalog">Catalog</a><img class = 'menu-arrow' src = '/image/Header/arrow.png' alt="header"></li>
+                <li><a href = "/about">About Us</a></li>
+                <li><a href = "/contact">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class ='login hidden' id="account-modal">
+            <form class = 'inner-login' id="account-form">
+                <div class = 'data-input'>
+                    <label for="email">Email address <span>*</span></label>
+                    <input type="email" id="email" name="email" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$">
+                    <label for="password">Password <span>*</span></label>
+                    <div class = 'input-wrapper'>
+                         <input type="password" id="password" name="password" required>
+                         <button type="button" id="account-eye"> <img src = '/image/Header/eye.png' alt="eye"></button>
+                    </div>
+                </div>
+                <div class = 'checkbox-forget'>
+                    <label class = 'checkbox-container' for = 'checkbox'>
+                        <input type ="checkbox" name = 'checkbox' id="checkbox">
+                        Remember me
+                    </label>
+                    <a href = '#' >Forget Your Password?</a>
+                </div>
+                <button>LOG IN</button>
+            </form>
+        </div>
+    </header>
+    <article class = 'product'>
+        <div class = 'inner-container'>
+            <div class = 'presentation'>
+                <div class = 'photos'>
+                        <img class = 'focus-image' src="/image/Product Card/suitcase yellow.png" id="product-image" alt="product">                    <div class = 'small-images'>
+                        <img src = "/image/Product Card/suitcase-small-card-1.png" alt="product 1">
+                        <img src = "/image/Product Card/suitcase-small-2.png" alt="product 2">
+                        <img src = "/image/Product Card/suitcase-small-4.png" alt="product 3">
+                        <img src = "/image/Product Card/yellow_open1.png" alt="product 4">
+                    </div>
+                </div>
+                <div class = 'description'>
+                    <div class = 'text-part'>
+                        <h1 id="product-name">Global Explorer Max Comfort Suitcase Pro</h1>
+                        <div class = 'rating'>
+                            <div class = 'stars' id="product-rating">
+                                <img src = "/image/Product Card/full-star.png" alt="star">
+                                <img src = "/image/Product Card/full-star.png" alt="star"> 
+                                <img src = "/image/Product Card/full-star.png" alt="star">
+                                <img src = "/image/Product Card/full-star.png" alt="star"> 
+                                <img src = "/image/Product Card/empty-star.png" alt="star"> 
+                            </div>
+                            <p>(1 Clients Review)</p>
+                        </div>
+                        <h3 id="product-price">$250</h3>
+                        <p>The new Global Explorer Max Comfort Suitcase Pro is a bold reimagining of travel essentials, designed to elevate every journey. Made with at least 30% recycled materials, its lightweight yet impact-resistant shell combines eco-conscious innovation with rugged durability.</p>
+                        <p>The ergonomic handle and GlideMotion spinner wheels ensure effortless mobility while making a statement in sleek design. Inside, the modular compartments and adjustable straps keep your belongings secure and neatly organized, no matter the destination.</p>
+                    </div>
+                    <div class = 'selectors'>
+                        <label for = 'size' >Size</label>
+                        <div class = 'select-wrapper'>
+                            <select>
+                                <option selected disabled id="product-size">Choose option</option>
+                            </select>
+                        </div>
+                        <label for = 'color'>Color</label>
+                        <div class = 'select-wrapper'>
+                            <select>
+                                <option selected disabled id="product-color">Choose option</option>
+                            </select>
+                        </div>
+                        <label for = 'category'>Category</label>
+                        <div class = 'select-wrapper'>
+                            <select>
+                                <option selected disabled id="product-category">Choose option</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class = 'quantity-add-buttons'>
+                        <div class = 'quantity'>
+                            <button id="product-minus">-</button>
+                            <p id="product-quantity">1</p>
+                            <button id="product-plus">+</button>
+                        </div>
+                        <button id="product-add-to-cart"> Add To Card</button>
+                    </div>
+                    <img src = "/image/Product Card/Payments.png" alt="payment">
+                </div>
+
+            </div>
+            <div class = 'details-review-container'>
+                <div class = 'buttons'>
+                    <button class = 'active'>DETAILS</button>
+                    <button>REVIEWS</button>
+                    <button>SHIPPING POLICY</button>
+                </div>
+                <div class = 'selected-info'>
+                    <div class = 'details'>
+                        <p>Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh mollis. Nulla porta risus id neque tempor, in efficitur justo imperdiet. Etiam a ex at ante tincidunt imperdiet. Nunc congue ex vel nisl viverra, sit amet aliquet lectus ullamcorper. Praesent luctus lacus non lorem elementum, eu tristique  sapien suscipit. Sed bibendum, ipsum nec viverra malesuada, erat nisi sodales purus, eget hendrerit dui ligula eu enim. Ut non est nisi. Pellentesque tristique pretium dolor eu commodo. Proin iaculis nibh vitae lectus mollis bibendum. Quisque varius eget urna sit amet luctus. Suspendisse potenti. Curabitur ac placerat est, sit amet sodales risus. Pellentesque viverra dui auctor, ullamcorper turpis pharetra, facilisis quam.</p>
+                        <p>Proin iaculis nibh vitae lectus mollis bibendum. Quisque varius eget urna sit amet luctus. Suspendisse potenti. Curabitur ac placerat est, sit amet sodales risus. Pellentesque viverra dui auctor, ullamcorper turpis pharetra, facilisis quam. Proin iaculis nibh vitae lectus mollis bibendum.</p>
+                        <p>Quisque varius eget urna sit amet luctus. Suspendisse potenti. Curabitur ac placerat est, sit amet sodales risus. Pellentesque viverra dui auctor, ullamcorper turpis pharetra, facilisis quam.</p>
+                    </div>
+                    <div class = 'reviews hidden'>
+                        <div class="left-side">
+                            <h4>1 review for <span>Global Explorer Max Comfort Suitcase Pro</span></h4>
+                            <div class="review">
+                                <img src ='/image/Product Card/review customer.png' alt="review">
+                                <div class = 'name-text-stars'>
+                                    <div class = 'name-and-rating'>
+                                        <h5>Ella Harper <span>/ June 11, 2025</span></h5>
+                                        <div class = 'rating'>
+                                            <img src = "/image/Product Card/full-star.png" alt="star">
+                                            <img src = "/image/Product Card/full-star.png" alt="star"> 
+                                            <img src = "/image/Product Card/full-star.png" alt="star">
+                                            <img src = "/image/Product Card/full-star.png" alt="star"> 
+                                            <img src = "/image/Product Card/empty-star.png" alt="star"> 
+                                        </div>
+                                    </div>
+                                    <p>Proin iaculis nibh vitae lectus mollis bibendum. Quisque varius eget urna sit amet luctus. Suspendisse potenti curabitur ac placerat est, sit amet sodales risus.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class = 'right-side'>
+                            <h4>Add Review</h4>
+                            <p>Your email address won't be shared with anybody. Required fields have the symbol <span>*</span></p>
+                            <div class = 'rate-product'>
+                                <h5>RATE PRODUCT</h5>
+                                <div>
+                                    <img src = "/image/Product Card/empty-star.png" alt="star"> 
+                                    <img src = "/image/Product Card/empty-star.png" alt="star"> 
+                                    <img src = "/image/Product Card/empty-star.png" alt="star"> 
+                                    <img src = "/image/Product Card/empty-star.png" alt="star"> 
+                                    <img src = "/image/Product Card/empty-star.png" alt="star"> 
+                                </div> 
+                            </div>
+                            <form id="product-review-form">
+                                <textarea placeholder="Your Review*" name="review" required></textarea>
+                                <div class = 'input-container'>
+                                    <input type='text' placeholder = 'Your Name*' name="name" required>
+                                    <input type='email' placeholder= 'Your Email*' name="email" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$">
+                                </div>
+                                <label class = 'checkbox-container' for = 'checkbox'>
+                                    <input type ="checkbox" name = 'checkbox'>
+                                    Save my name, email, and website in this browser for when I leave another comment.
+                                </label>
+                                <button>SUBMIT</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class = 'shipping-policy hidden'>
+                        Shipping policy.
+                    </div>
+                </div>
+            </div>
+            <div class = 'recommendations'>
+                <h2>You May Also Like</h2>
+                <div class = 'recommended-products' id="product-recommended"></div>
+                <template id="product-recommended-template">
+                    <div class = 'product-card'>
+                        <div class = 'img-wrapper'>
+                            <span class = 'sale-badge'>SALE</span>
+                            <img src = '/image/Homepage/suitcase blue.png' class="recommended-image" alt="suitcase">
+                        </div>
+                        <h4 class="recommended-name">Vel vestibulum elit tuvel euqen.</h4>
+                        <h5 class="recommended-price">$250</h5>
+                        <button class="recommended-add-to-cart">Add To Cart</button>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </article>
+    <footer>
+         <div class="wave-banner">
+            <div class = 'center-div'>
+                <p>Our Benefits</p>
+                <div class = 'benefits'>
+                    <div class = 'one-benefit'>
+                        <img src="/image/Footer/travel-icon.svg" alt="travel">
+                        <p>Velit nisl sodales eget donec quis. volutpat orci.</p>
+                    </div>
+                    <div class = 'one-benefit'>
+                        <img src="/image/Footer/car-icon.svg" alt="car">
+                        <p>Dolor eu varius. Morbi fermentum velit nisl.</p>
+                    </div>
+                    <div class = 'one-benefit'>
+                        <img src="/image/Footer/money-icon.svg" alt="money">
+                        <p>Malesuada fames ac ante ipsum primis in faucibus.</p>
+                    </div>
+                    <div class = 'one-benefit'>
+                        <img src="/image/Footer/school-icon.svg" alt="school">
+                        <p>Nisl sodales eget donec quis. volutpat orci.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = 'white-part'>
+            <div class= 'left-part'>
+                <div class = 'left-upper-part'>
+                    <div>
+                        <h5><a class = 'footer-link' href = "/about">About Us</a></h5>
+                        <ul>
+                            <li><a href="#">Organisation</a></li>
+                            <li><a href="#">Partners</a></li>
+                            <li><a href="#">Clients</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Interesting Links</h5>
+                          <ul>
+                            <li><a href="#">Photo Gallery</a></li>
+                            <li><a href="/">Our Team</a></li>
+                            <li><a href="#">Socials</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Achievements</h5>
+                          <ul>
+                            <li><a href="#">Winning Awards</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Our Amazing Clients</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h5>Shipping Information</h5>
+                    <p>Nulla eleifend pulvinar purus, molestie euismod odio imperdiet ac. Ut sit amet erat nec nibh rhoncus varius in non lorem. Donec interdum, lectus in convallis pulvinar, enim elit porta sapien, vel finibus erat felis sed neque. Etiam aliquet neque sagittis erat tincidunt aliquam.</p>
+                </div>
+            </div>
+            <div class = 'right-part'>
+                <div>
+                    <h5><a class = 'footer-link' href = "/contact">Contact Us</a></h5>
+                    <p class='higher-p'>Bendum dolor eu varius. Morbi fermentum velitsodales egetonec. volutpat orci. Sed ipsum felis, tristique egestas et, convallis ac velitn consequat nec luctus.</p>
+                </div>
+                <div class = 'grid-container'>
+                    <div>
+                        <img src="/image/Footer/phone-icon.svg" alt="phone">
+                        <p>Phone: (+63) 236 6322</p>
+                    </div>
+                    <div>
+                        <img src="/image/Footer/mail-icon.svg" alt="mail">
+                        <p>public@news.com</p>
+                    </div>
+                    <div>
+                        <img src="/image/Footer/clock-icon.svg" alt="time">
+                        <div>
+                            <p>Mon - Fri: 10am - 6pm</p>
+                            <p>Sat - Sun: 10am - 6pm</p>
+                        </div>
+                    </div>
+                     <div>
+                        <img src="/image/Footer/pin-icon.svg" alt="location"> 
+                        <div>
+                            <p>639 Jade Valley, </p>
+                            <p>Washington Dc</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class = 'copyright'>© Copyright 2025</p>
+    </footer>
+</body>

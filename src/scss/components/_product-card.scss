@@ -1,0 +1,51 @@
+@use '../abstracts/variables' as *;
+
+.product-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 18.5rem;
+    width: 100%;
+
+    h4, h5{
+        font-size: 1.188rem;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    h5{
+        color: $dark-grey;
+    }
+
+    button{
+        font-size: 1.063rem;
+        font-weight: 700;
+    }
+
+    .img-wrapper{
+        position: relative;
+       
+
+        img{
+            width: 100%;
+            display: block;
+            margin-bottom: 0.5rem;
+            box-shadow: 0 20px 80px 0 #C1C7D4B3;
+            
+        }
+
+        .sale-badge{
+            position:absolute; 
+            top: 1rem;
+            left: 1rem;
+            background-color: $pink-color;
+            padding: 0.438rem 0.625rem;
+            color: $text-white;
+            font-size: 0.75rem;
+            font-weight: 700;
+
+        }
+    }
+}
